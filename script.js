@@ -1,23 +1,5 @@
 "use strict";
 
-// filter by cockails first, then narrow down.
-
-// const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`;
-
-// let cocktails;
-
-// let firstFetch = fetch(url)
-//   .then((response) => response.json())
-//   .then((data) => (cocktails = data.drinks))
-//   .then(() => console.log(cocktails))
-//   .catch((err) => console.error("👻Error:", err));
-
-// let secondFetch = fetch(
-//   `www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007`
-// )
-//   .then((response) => response.json())
-//   .then((data) => console.log(data));
-
 let id = 11007;
 
 fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -32,13 +14,41 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
     }
   });
 
-// const getIngredients = function (next) {
-//   let contents = [];
-//   for (let i = 1; i > 10; i++) {
-//     if (next.strIngredient[i]) {
-//       console.log(next.strIngredient[i]);
-//       contents.push(strIngredient[i]);
-//     }
-//   }
-//   return contents;
-// };
+class Order {
+  // purpose: build the values of the order
+  //   constatns: idOrder, drinksArr, subtotal, tax, total
+  // methods: balance after order is completed
+
+  constructor(idOrder, drinksArr, subtotal, tax, total) {
+    //   assingment of this variables
+  }
+
+  getDrink() {
+    //   use a new Drink to push to the object
+    // add new drink to order;
+    //;
+  }
+
+  //   getScore() {
+  //     return this.score;
+  //   }
+
+  //   getWins() {
+  //     return this.wins;
+  //   }
+
+  //   getLosses() {
+  //     return this.losses;
+  //   }
+
+  //   getQuestions() {
+  //     return this.questions;
+  //   }
+}
+
+class Drinks {
+  // when we click on a drink, this will fill the drinksArr in the Order
+  // All of the
+  // first api gives the drink name, and ID
+  // second gives everything
+}
