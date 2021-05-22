@@ -10,6 +10,9 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       let currentIng = `strIngredient${i}`;
       if (next[currentIng]) {
         console.log(next[currentIng]);
+        document
+          .querySelector(".ing-list")
+          .append($(`<li>${next[currentIng]}<li>`));
       }
     }
   });
