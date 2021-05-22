@@ -28,6 +28,7 @@ img {
   width: 100px;
   height: 30px;
 }
+
 html,
 body {
   height: 100%;
@@ -75,15 +76,14 @@ body {
 }
 
 .left {
-  border-style: solid;
   flex: 1;
   display: flex;
   flex-direction: column;
   height: max-content;
+  margin-top: 10px;
 }
 
 #drink-image {
-  margin-top: 10px;
   width: 100%;
   max-height: 600px;
   object-fit: contain;
@@ -93,18 +93,19 @@ body {
 .ingredients {
   background-color: chocolate;
   margin-top: 10px;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .ing-title {
+  /* border-style: solid; */
   text-align: center;
 }
 
 .ing-list {
+  margin-top: -15px;
+  /* border-style: solid; */
   padding: 0;
 }
 
@@ -130,8 +131,14 @@ body {
 }
 
 .price {
+  padding: 10px;
   background-color: darkkhaki;
   flex: 1;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
 }
