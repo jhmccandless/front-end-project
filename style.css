@@ -3,8 +3,9 @@
     height: 5%;
 }
 
-main{
 
+main{
+padding-top: 5%;
     
 }
 
@@ -23,4 +24,11 @@ main{
 img{
     width:"250px"; 
     height:"250px";
+}
+
+#cart{
+    margin-left: 85%;
+    margin-bottom: 10%;
+    width: 100px;
+    height: 30px;
 }
