@@ -1,0 +1,34 @@
+.cocktailTile{
+    width: 5%;
+    height: 5%;
+}
+
+
+main{
+padding-top: 5%;
+    
+}
+
+#row1{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+    
+
+#row2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img{
+    width:"250px"; 
+    height:"250px";
+}
+
+#cart{
+    margin-left: 85%;
+    margin-bottom: 10%;
+    width: 100px;
+    height: 30px;
+}
