@@ -1,34 +1,137 @@
-.cocktailTile{
-    width: 5%;
-    height: 5%;
+.cocktailTile {
+  width: 5%;
+  height: 5%;
 }
 
-
-main{
-padding-top: 5%;
-    
+main {
+  padding-top: 5%;
 }
 
-#row1{
-    display: flex;
-    justify-content: space-evenly;
-
-}
-    
-
-#row2{
-    display: flex;
-    justify-content: space-evenly;
+#row1 {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-img{
-    width:"250px"; 
-    height:"250px";
+#row2 {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-#cart{
-    margin-left: 85%;
-    margin-bottom: 10%;
-    width: 100px;
-    height: 30px;
+img {
+  width: "250px";
+  height: "250px";
+}
+
+#cart {
+  margin-left: 85%;
+  margin-bottom: 10%;
+  width: 100px;
+  height: 30px;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: aquamarine;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 10px;
+  display: relative;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-to-cart-button,
+.main-page-button {
+  margin: 10px;
+  padding-top: 5px;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.main > * {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.left {
+  border-style: solid;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+
+#drink-image {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  position: relative;
+}
+
+.ingredients {
+  background-color: chocolate;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ing-title {
+  text-align: center;
+}
+
+.ing-list {
+  padding: 0;
+}
+
+.instructions {
+  background-color: cornflowerblue;
+  flex: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  height: max-content;
+}
+
+.ins-title {
+  position: relative;
+}
+
+.ins-text {
+  position: relative;
+}
+
+.price {
+  background-color: darkkhaki;
+  flex: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
