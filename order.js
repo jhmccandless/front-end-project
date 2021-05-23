@@ -1,9 +1,11 @@
 class Order {
-    
-    
-        constructor() {
-         
-        }
+    // purpose: build the values of the order
+    //   constatns: idOrder, drinksArr, subtotal, tax, total
+    // methods: balance after order is completed
+  
+    constructor(idOrder, drinksArr, subtotal, tax, total) {
+      //   assingment of this variables
+    }
        
     }
 
