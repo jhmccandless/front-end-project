@@ -13,39 +13,32 @@ async function displayAllDrinks() {
 
     for (let i = 0; i < data1.drinks.length; i++) {
       if (data1.drinks[i].strDrink == "Mojito") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
 
       if (data1.drinks[i].strDrink == "Munich Mule") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
       if (data1.drinks[i].strDrink == "Michelada") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
       if (data1.drinks[i].strDrink == "Gin and Soda") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
       if (data1.drinks[i].strDrink == "Death in the Afternoon") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
       if (data1.drinks[i].strDrink == "Cosmopolitan") {
-        console.log(data1.drinks[i].strDrink);
         desiredDrinks.push(i);
       }
     }
 
-    console.log(desiredDrinks);
-    console.log(data1.drinks[desiredDrinks[0]].strDrinkThumb);
     for (var i = 0; i < desiredDrinks.length; i++) {
       $("#cocktailImg" + [i + 1]).attr(
         "src",
         data1.drinks[desiredDrinks[i]].strDrinkThumb
       );
+      $("#cocktailImg" + [i + 1]).click();
     }
   } catch (error) {
     console.log(error);
