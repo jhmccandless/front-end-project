@@ -5,12 +5,13 @@
 
 #row1 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #row2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-top: 2%;
 }
 
 img {
@@ -137,4 +138,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: max-content;
+}
+
+#allCocktailTiles{
+  margin-top: 6%;
 }
