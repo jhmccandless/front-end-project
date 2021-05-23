@@ -1,7 +1,6 @@
 // var objDrink1 = new Drink();
 async function displayAllDrinks() {
   var data1 = {};
-  var cocktailImg1 = document.getElementById("cocktailImg1");
   try {
     const response = await axios.get(
       "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
@@ -38,7 +37,6 @@ async function displayAllDrinks() {
         "src",
         data1.drinks[desiredDrinks[i]].strDrinkThumb
       );
-      $("#cocktailImg" + [i + 1]).click();
     }
   } catch (error) {
     console.log(error);
