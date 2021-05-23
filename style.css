@@ -1,32 +1,29 @@
 .cocktailTile {
-  width: 5%;
-  height: 5%;
+
 }
 
-main {
-  padding-top: 5%;
-}
 
 #row1 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 #row2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-top: 2%;
 }
 
 img {
   width: "250px";
   height: "250px";
+  border-radius: 20px;
 }
 
 #cart {
-  margin-left: 85%;
-  margin-bottom: 10%;
-  width: 100px;
-  height: 30px;
+  margin: 10px;
+  padding-top: 5px;
+
 }
 
 html,
@@ -141,4 +138,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: max-content;
+}
+
+#allCocktailTiles{
+  margin-top: 6%;
 }
