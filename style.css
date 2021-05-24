@@ -55,6 +55,11 @@ body {
   flex-direction: row;
 }
 
+.buttons a{
+  text-decoration: none;
+  color: black;
+}
+
 .add-to-cart-button,
 .main-page-button {
   margin: 10px;
