@@ -48,6 +48,8 @@ body {
 .buttons {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  padding-right: 1%;
 }
 
 .buttons a {
@@ -57,13 +59,13 @@ body {
 
 #cart {
   /* border-style: solid; */
-  margin-top: 5px;
+  /* margin-top: 5px; */
   /* align-self: center; */
 }
 
 .main-page-button {
   align-self: center;
-  /* margin-top: 20px; */
+  /* margin-left: 20px; */
 }
 
 .main {
