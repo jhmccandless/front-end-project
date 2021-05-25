@@ -38,6 +38,13 @@ async function displayAllDrinks() {
         data1.drinks[desiredDrinks[i]].strDrinkThumb
       );
     }
+    
+    for (var i = 0; i < desiredDrinks.length; i++) {
+      $("#cocktailTile" + [i + 1] + "Label").html(
+        data1.drinks[desiredDrinks[i]].strDrink
+      );
+    }
+
   } catch (error) {
     console.log(error);
   }
