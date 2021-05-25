@@ -3,6 +3,7 @@
 var data1 = {};
 var data2={};
 var desiredDrinks = [];
+
 async function displayAllDrinks() {
   try {
     const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail");
@@ -42,35 +43,47 @@ async function displayAllDrinks() {
       );
 
     }
+    
   } catch (error) {
     console.log(error);
   }
 }
 
 async function displayDrinkDetails() {
-    
-  var drinkClicked="";
   var apiURL="";
   try {
+
+   const drinkClicked =document
+  .querySelectorAll(".cocktailTile")
+  .forEach(
+    el => el.addEventListener(
+      "click",
+      event => {
+        const img = el.querySelector("alt");
+        if (img) console.log(img.alt);
+      }
+    )
+  );
+ // localStorage
+
+//     apiURL= "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+drinkClicked;
+//     const response = await axios.get(apiURL);
+//     $("#cocktailImg" + [i + 1]).attr(
+//       "src",
+//       data2.drinks[desiredDrinks[i]].strDrinkThumb
+//     );
+//   data2= response.data;
+
   
-      drinkClicked = $('.cocktailTile').children('img').attr('alt');
-      apiURL= "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+drinkClicked;
-      const response = await axios.get(apiURL);
-      $("#cocktailImg" + [i + 1]).attr(
-        "src",
-        data1.drinks[desiredDrinks[i]].strDrinkThumb
-      );
-    data2= response.data;
-    $("#cocktailImg" + [i + 1]).attr(
-        "src",
-        data2.drinks[desiredDrinks[i]].strDrinkThumb
-      );
+//     
+      }
+    
    
-  } catch (error) {
+  catch (error) {
     console.log(error);
   }
 }
 
 
 
-displayAllDrinks();
+window.onload = displayAllDrinks();
