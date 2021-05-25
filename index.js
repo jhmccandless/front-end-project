@@ -1,12 +1,11 @@
 // var objDrink1 = new Drink();
+
 var data1 = {};
+var data2={};
 var desiredDrinks = [];
 async function displayAllDrinks() {
-  
   try {
-    const response = await axios.get(
-      "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
-    );
+    const response = await axios.get("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail");
     data1 = response.data;
     // console.log(data1);
 
@@ -49,13 +48,29 @@ async function displayAllDrinks() {
 }
 
 async function displayDrinkDetails() {
+    
   var drinkClicked="";
+  var apiURL="";
   try {
+  
       drinkClicked = $('.cocktailTile').children('img').attr('alt');
+      apiURL= "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+drinkClicked;
+      const response = await axios.get(apiURL);
+      $("#cocktailImg" + [i + 1]).attr(
+        "src",
+        data1.drinks[desiredDrinks[i]].strDrinkThumb
+      );
+    data2= response.data;
+    $("#cocktailImg" + [i + 1]).attr(
+        "src",
+        data2.drinks[desiredDrinks[i]].strDrinkThumb
+      );
    
   } catch (error) {
     console.log(error);
   }
 }
+
+
 
 displayAllDrinks();
