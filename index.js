@@ -44,10 +44,19 @@ async function displayAllDrinks() {
 
         }
 
-    } catch (error) {
-        console.log(error);
+  
+    
+    for (var i = 0; i < desiredDrinks.length; i++) {
+      $("#cocktailTile" + [i + 1] + "Label").html(
+        data1.drinks[desiredDrinks[i]].strDrink
+      );
     }
+} 
+  catch (error) {
+    console.log(error);
+  }
 }
+
 
 function displayDrinkDetails(num) {
     try {
