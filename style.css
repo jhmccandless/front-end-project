@@ -51,6 +51,15 @@ body {
   border-radius: 15px;
 }
 
+.the-foot {
+  background-color: aquamarine;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  height: 70px;
+}
+
 .title {
   margin: 10px;
   display: relative;
@@ -202,12 +211,11 @@ body {
 }
 
 .alt-cart-button:visited {
-  /* text-decoration: none; */
   color: inherit;
 }
 
 #allCocktailTiles {
-  margin-top: 6%;
+  margin: 4%;
 }
 
 /* Nav Bar*/
