@@ -51,6 +51,15 @@ body {
   border-radius: 15px;
 }
 
+.the-foot {
+  background-color: aquamarine;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+  height: 70px;
+}
+
 .title {
   margin: 10px;
   display: relative;
@@ -106,12 +115,33 @@ body {
   position: relative;
 }
 
+.center-right {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin-top: -10px;
+}
+
+.sel-drink-title {
+  background-color: #f07db3;
+  width: max-content;
+  border-radius: 15px;
+  padding: 10px;
+  align-self: center;
+}
+
+.drink-details {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: -10px;
+}
+
 .center {
   flex: 1;
   display: flex;
   flex-direction: column;
   height: max-content;
-  margin-top: 10px;
 }
 
 .ingredients {
@@ -140,17 +170,19 @@ body {
 
 .ins-title {
   margin-top: 0px;
+  text-align: center;
 }
 
 .ins-text {
   margin-top: -15px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .right {
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin-top: 10px;
   height: max-content;
 }
 .price {
@@ -179,12 +211,11 @@ body {
 }
 
 .alt-cart-button:visited {
-  /* text-decoration: none; */
   color: inherit;
 }
 
 #allCocktailTiles {
-  margin-top: 6%;
+  margin: 4%;
 }
 
 /* Nav Bar*/
