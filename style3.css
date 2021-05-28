@@ -1,4 +1,10 @@
 /* Nav Bar*/
+.button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
 h1{
     text-align: center;
     
