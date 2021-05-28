@@ -1,14 +1,16 @@
 // var objDrink1 = new Drink();
+
+var data1 = {};
+var data2 = {};
+var desiredDrinks = [];
+
 async function displayAllDrinks() {
-  var data1 = {};
   try {
     const response = await axios.get(
       "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
     );
     data1 = response.data;
     // console.log(data1);
-
-    let desiredDrinks = [];
 
     for (let i = 0; i < data1.drinks.length; i++) {
       if (data1.drinks[i].strDrink == "Mojito") {
@@ -37,29 +39,26 @@ async function displayAllDrinks() {
         "src",
         data1.drinks[desiredDrinks[i]].strDrinkThumb
       );
+      $("#cocktailImg" + [i + 1]).attr(
+        "alt",
+        data1.drinks[desiredDrinks[i]].strDrink
+      );
+      $("#cocktailTile" + [i + 1] + "Label").html(
+        data1.drinks[desiredDrinks[i]].strDrink
+      );
     }
   } catch (error) {
     console.log(error);
   }
 }
 
-async function displayDrinksByID() {
-  var data2 = {};
+function displayDrinkDetails(num) {
   try {
-    const response = await axios.get(
-      "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail"
-    );
-    data1 = response.data;
-    // objDrink1.questions = data1.results;
-    document.getElementById("drinkId").innerHTML = data1.drinks[0].idDrink;
-    document.getElementById("drinkName").innerHTML = data1.drinks[0].strDrink;
-    document.getElementById("drinkPicture").src = data1.drinks[0].strDrinkThumb;
+    var currNum = num;
+    localStorage.setItem("drinkName", currNum.alt);
   } catch (error) {
     console.log(error);
   }
 }
 
-displayAllDrinks();
-/* <label id="">Drink ID</label>
-<label id="drinkName">Drink Name</label>
-<img id="drinkPicture"> */
+window.onload = displayAllDrinks();
