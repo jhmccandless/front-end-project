@@ -4,24 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel= "stylesheet" type= "text/css">
+    <title>Cart Page</title>
+    <link href="style3.css" rel= "stylesheet" type= "text/css">
 </head>
 <body>
+    <div class="header">
+        <h1 class="title">Drink Detail</h1>
+        <div class="buttons">
+          <a href="index.html" class="main-page-button">Home</a>
+          <a href="index3.html" id="cart">
+            <img 
+              id="cartIcon" 
+              src="cart.png"
+              alt="cocktail photo" 
+              width="30px"
+              height="30px"
+          /></a>
+        </div>
+      </div>
     <div class="container">
         <div class= "navbar">
             <div class= "logo"></div>
         </div>
         <nav>
+            
             <ul id="MenuItems">
-            <li><a href= "">Home</a></li>
-            <li><a href= "">Products</a></li>
-            <li><a href= "">About</a></li>
-            <li><a href= "">Contact</a></li>
-            <li><a href= "">Account</a></li>
-            </ul>
+                <button type= "button">Finalize Order</button>
+                <script>
+                    var pressedButton = document.getElementsByTagName("button")[0];
+                    pressedButton.addEventListener("click", function (event) {
+                       alert("You have finalized your order!")
+                    })
+                 </script>
+                 <button type="button">Clear Order</button>
+                 <script>
+                     var pressedButton = document.getElementsByTagName("button")[1];
+                    pressedButton.addEventListener("click", function (event) {
+                       alert("You have cleared your order :")
+                    })
+                 </script>
+        
+
+            </div>
 
             <h2>Your Cart</h2>
+
+    
             
 
             
