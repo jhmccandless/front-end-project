@@ -9,23 +9,21 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="title">Drink Detail</h1>
+        <h1 class="title">Cart</h1>
         <div class="buttons">
           <a href="index.html" class="main-page-button">Home</a>
           <a href="index3.html" id="cart">
-            <img 
-              id="cartIcon" 
+            <img
+              id="cartIcon"
               src="cart.png"
-              alt="cocktail photo" 
+              alt="cart icon"
               width="30px"
               height="30px"
           /></a>
         </div>
       </div>
     <div class="container">
-        <div class= "navbar">
-            <div class= "logo"></div>
-        </div>
+    </div>
         <nav>
             
             <ul id="MenuItems">
@@ -42,53 +40,24 @@
                     pressedButton.addEventListener("click", function (event) {
                        alert("You have cleared your order :")
                     })
-                 </script>
-        
+                 </script>      
 
             </div>
-
-           
-
-    
-            
-
-            
             
         </nav>
     </div>
 
     <div class= "small-container cart-page">
-    <div class="last-page-wrap">
+        <div class="last-page-wrap">
 
-        <!-- <div class="container"> -->
-            <!-- <div class= "navbar">
+        <div class="container">
+             <div class= "navbar">
                 <div class= "logo"></div>
-            </div> -->
-            <!-- <nav>
-                <ul id="MenuItems">
-                <li><a href= "">Home</a></li>
-                <li><a href= "">Products</a></li>
-                <li><a href= "">About</a></li>
-                <li><a href= "">Contact</a></li>
-                <li><a href= "">Account</a></li>
-                </ul>        
-            </nav> -->
-            <div class="header">
-                <h1 class="title">Your Cart</h1>
-                <div class="buttons">
-                  <a href="index.html" class="main-page-button">Home</a>
-                  <a href="index3.html" id="cart">
-                    <img
-                      id="cartIcon"
-                      src="cart.png"
-                      alt="cocktail photo"
-                      width="30px"
-                      height="30px"
-                  /></a>
-                </div>
-              </div>
-        <!-- </div> -->
-        <!-- <h2 id="cart-page-title">Your Cart</h2> -->
+            </div> 
+
+
+         </div> 
+         <!-- <h2 id="cart-page-title">Your Cart</h2> -->
     
         <div class= "small-container cart-page">
     
@@ -96,12 +65,12 @@
                 <tr>
                     <th>Product</th>
                     <th>Quantity</th>
-                    <th>Subtotal</th>
+                    <th></th>
                 </tr>
                 <tr>
                     <td>
                     <div class= "cart-info">
-                        <img
+                        <img/>
                         <div>
                         <p></p>
                         <small> Price: </small>
@@ -117,7 +86,7 @@
         <tr>
             <td>
             <div class= "cart-info">
-                <img 
+                <img />
                 <div>
                 <p></p>
                 <small>Price: </small>
@@ -132,7 +101,7 @@
     <tr>
         <td>
         <div class= "cart-info">
-            <img 
+            <img />
             <div>
             <p></p>
             <small>Price: </small>
@@ -178,6 +147,28 @@
             </div>
         </div> -->
     </div>
+
+    <!-- <nav>
+            
+        <ul id="MenuItems">
+            <button type= "button">Finalize Order</button>
+            <script>
+                var pressedButton = document.getElementsByTagName("button")[0];
+                pressedButton.addEventListener("click", function (event) {
+                   alert("You have finalized your order!")
+                })
+             </script>
+             <button type="button">Clear Order</button>
+             <script>
+                 var pressedButton = document.getElementsByTagName("button")[1];
+                pressedButton.addEventListener("click", function (event) {
+                   alert("You have cleared your order :")
+                })
+             </script>      
+
+        </div>
+        
+    </nav> -->
     
     
 </body>
