@@ -37,6 +37,14 @@ body {
   height: 100%;
 }
 
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(183, 128, 255),
+    rgb(174, 248, 104)
+  );
+}
+
 .wrapper {
   margin: 10px 0px;
   height: 100%;
