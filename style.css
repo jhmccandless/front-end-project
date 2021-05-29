@@ -55,9 +55,38 @@ body {
   background-color: aquamarine;
   flex-direction: row;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   height: 70px;
+}
+
+.the-foot * {
+  margin: 7px;
+}
+
+.fa {
+  height: 20px;
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 
 .title {
