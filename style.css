@@ -37,7 +37,16 @@ body {
   height: 100%;
 }
 
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(183, 128, 255),
+    rgb(174, 248, 104)
+  );
+}
+
 .wrapper {
+  margin: 10px 0px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -49,15 +58,46 @@ body {
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .the-foot {
   background-color: aquamarine;
   flex-direction: row;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
   height: 70px;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
+}
+
+.the-foot * {
+  margin: 7px;
+}
+
+.fa {
+  height: 20px;
+  padding: 10px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 
 .title {
@@ -113,6 +153,7 @@ body {
   max-height: 100%;
   object-fit: contain;
   position: relative;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .center-right {
@@ -128,6 +169,7 @@ body {
   border-radius: 15px;
   padding: 10px;
   align-self: center;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .drink-details {
@@ -151,6 +193,7 @@ body {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .ing-list {
@@ -166,6 +209,7 @@ body {
   padding: 20px;
   height: max-content;
   border-radius: 20px;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .ins-title {
@@ -188,6 +232,7 @@ body {
 .price {
   background-color: darkkhaki;
   border-radius: 20px;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
   margin-bottom: 10px;
   display: flex;
   padding: 0px 10px;
@@ -208,6 +253,7 @@ body {
   justify-content: center;
   border: solid 1px;
   text-decoration: none;
+  box-shadow: 5px 8px 5px #888888, inset 0 0 7px #000000;
 }
 
 .alt-cart-button:visited {
