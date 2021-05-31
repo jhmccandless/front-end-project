@@ -274,7 +274,7 @@ h1 {
   text-align: center;
   margin-bottom: 2em;
   margin-left: 0rem;
-  font-family: monospace;
+  /* font-family: monospace; */
 }
 
 .last-page-wrap {
@@ -287,7 +287,7 @@ h1 {
   display: flex;
   align-items: center;
   padding: 20px;
-  font-family: monospace;
+  /* font-family: monospace; */
 }
 
 nav {
@@ -317,7 +317,6 @@ p {
 /*----Cart page setup--------*/
 
 .cart-page {
-  margin: 80px auto;
 }
 
 table {
@@ -332,7 +331,7 @@ input {
 }
 td a {
   color: black;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 .cart-info {
@@ -344,7 +343,7 @@ th {
   padding: 5px;
   color: white;
   background: rosybrown;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 
 td {
@@ -381,11 +380,7 @@ th:last-child {
   text-align: right;
 }
 
-/* Footer items*/
-
-.footer {
-  background: rosybrown;
-  color: white;
-  font-size: 14px;
-  padding: 60px 0 20px;
+#MenuItems {
+  /* border-style: solid; */
+  /* justify-content: center; */
 }
