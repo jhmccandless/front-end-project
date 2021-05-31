@@ -65,7 +65,7 @@ function displayDrinkDetails(num) {
 function addToOrder() {
     var orderNumber = 0;
     try {
-        if (localStorage.getItem("drinkName") && localStorage.getItem("orderInProgress") === null) {
+        if (localStorage.getItem("drinkAdded") && localStorage.getItem("orderInProgress") === null) {
             let startOrder = new Order();
             startOrder.idOrder = 1;
             let drinkToBeAdded = JSON.parse(localStorage.getItem("drinkAdded"));
@@ -73,13 +73,15 @@ function addToOrder() {
             let OrderToBeAdded_Serialized = JSON.stringify(startOrder);
             localStorage.setItem('orderInProgress', OrderToBeAdded_Serialized);
             console.log("starting a new order");
-        } else if (localStorage.getItem("drinkName") && localStorage.getItem("orderInProgress")) {
+            removeDrink();
+        } else if (localStorage.getItem("drinkAdded") && localStorage.getItem("orderInProgress")) {
           let continueOrder = JSON.parse(localStorage.getItem("orderInProgress"));
             let drinkToBeAdded = JSON.parse(localStorage.getItem("drinkAdded"));
             continueOrder.drinksArr.push(drinkToBeAdded);
             let OrderToBeAdded_Serialized = JSON.stringify(continueOrder);
             localStorage.setItem('orderInProgress', OrderToBeAdded_Serialized);
             console.log("added a new drink");
+            removeDrink();
         } else {
             console.log("No drinks added");
         }
@@ -88,5 +90,10 @@ function addToOrder() {
         console.log(error);
     }
 }
+function removeDrink()
+{
+    localStorage.removeItem("drinkAdded");
+}
+
 addToOrder();
 displayAllDrinks();

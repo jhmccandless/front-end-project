@@ -53,13 +53,10 @@ function addToCart() {
         drinkAdded.strDrinkThumb = data1.drinks[0].strDrinkThumb;
         let drinkAdded_serialized = JSON.stringify(drinkAdded);
         localStorage.setItem("drinkAdded", drinkAdded_serialized);
+        localStorage.removeItem("drinkName");
     } catch (error) {
         console.log(error);
     }
 }
-function removeDrink()
-{
-    localStorage.removeItem("drinkAdded");
-}
-removeDrink();
+
 displayDrinkDetail();
