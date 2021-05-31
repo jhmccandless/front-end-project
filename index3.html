@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
     <link href="style.css" rel= "stylesheet" type= "text/css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
 </head>
 <body>
     <div class="header">
@@ -23,30 +28,6 @@
         </div>
       </div>
     <div class="container">
-    </div>
-        <nav>
-            
-            <ul id="MenuItems">
-                <button type= "button">Finalize Order</button>
-                <script>
-                    var pressedButton = document.getElementsByTagName("button")[0];
-                    pressedButton.addEventListener("click", function (event) {
-                       alert("You have finalized your order!")
-                    })
-                 </script>
-                 <button type="button">Clear Order</button>
-                 <script>
-                     var pressedButton = document.getElementsByTagName("button")[1];
-                    pressedButton.addEventListener("click", function (event) {
-                       alert("You have cleared your order :")
-                    })
-                 </script>      
-
-            </div>
-            
-        </nav>
-    </div>
-
     <div class= "small-container cart-page">
         <div class="last-page-wrap">
 
@@ -67,57 +48,23 @@
                     <th>Quantity</th>
                     <th></th>
                 </tr>
-                <tr>
+                <tr class="cart-items" id="cart-item-1">
                     <td>
-                    <div class= "cart-info">
-                        <img/>
-                        <div>
-                        <p></p>
-                        <small> Price: </small>
-                        <br>
-                        <a href= "">Remove</a>
-                    </div>
+                        <div class= "cart-info">
+                            <img/>
+                            <div>
+                                <p>
+                                  <a> Price: </a>
+                                </p>
+                                <br>
+                                <a href= "">Remove</a>
+                            </div>
+                        </div>
                     </td>
                     <td><input type= "number" value= "1"></td>
                     <td></td>
                 </tr>
-            </tr>
-        </tr>
-        <tr>
-            <td>
-            <div class= "cart-info">
-                <img />
-                <div>
-                <p></p>
-                <small>Price: </small>
-                <br>
-                <a href= "">Remove</a>
-            </div>
-            </td>
-            <td><input type= "number" value= "1"></td>
-            <td></td>
-        </tr>
-    </tr>
-    <tr>
-        <td>
-        <div class= "cart-info">
-            <img />
-            <div>
-            <p></p>
-            <small>Price: </small>
-            <br>
-            <a href= "">Remove</a>
-        </div>
-        </td>
-        <td><input type= "number" value= "1"></td>
-        <td></td>
-    </tr>
-         
-      
-       
-               
             </table>
-    
             <div class= "total-price">
                 <table>
                     <tr>
@@ -136,21 +83,10 @@
                 </table>
             </div>
         </div>
-        <div class="the-foot"></div>
-        <!-- <div class= "footer">
-            <div class= "container">
-                <div class= "row">
-                    <div class= "footer-col-1"></div>
-                    <h3>Download Our App</h3>
-                    <p>Avilable for Andriod and Apple</p>
-                </div>
-            </div>
-        </div> -->
     </div>
-
-    <!-- <nav>
-            
-        <ul id="MenuItems">
+    <nav>
+        
+        <div id="MenuItems">
             <button type= "button">Finalize Order</button>
             <script>
                 var pressedButton = document.getElementsByTagName("button")[0];
@@ -168,8 +104,27 @@
 
         </div>
         
-    </nav> -->
-    
-    
+    </nav>
+</div>
+
+        <div class="the-foot">
+
+            <p>&#169; 2021 Digital Crafts</p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+          
+        </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./order.js"></script>
+    <script type="text/javascript" src="./drink.js"></script>
+    <script src="order.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

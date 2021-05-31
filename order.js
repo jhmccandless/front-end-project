@@ -1,14 +1,14 @@
-class Order {
-  // purpose: build the values of the order
-  //   constatns: idOrder, drinksArr, subtotal, tax, total
-  // methods: balance after order is completed
+// class Order {
+//   // purpose: build the values of the order
+//   //   constatns: idOrder, drinksArr, subtotal, tax, total
+//   // methods: balance after order is completed
 
-  constructor(idOrder, drinksArr, subtotal, tax, total) {
-    //   assingment of this variables
-  }
-}
+//   constructor(idOrder, drinksArr, subtotal, tax, total) {
+//     //   assingment of this variables
+//   }
+// }
 
-console.log();
+// console.log();
 
 //     async createOrder() {
 //         var data1 = [];
