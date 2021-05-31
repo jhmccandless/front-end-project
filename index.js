@@ -62,3 +62,8 @@ function displayDrinkDetails(num) {
 }
 
 window.onload = displayAllDrinks();
+
+// const removeCartItem = function (elID) {
+//   let element = document.getElementById(elID);
+//   element.parentNode.removeChild(element);
+// };
