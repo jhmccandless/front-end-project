@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart Page</title>
-    <link href="style.css" rel= "stylesheet" type= "text/css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="./cart.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-</head>
-<body>
-    <div class="header">
+  </head>
+  <body>
+    <div class="last-page-wrapper">
+      <div class="header">
         <h1 class="title">Cart</h1>
         <div class="buttons">
           <a href="index.html" class="main-page-button">Home</a>
@@ -28,100 +28,82 @@
           /></a>
         </div>
       </div>
-    <div class="container">
-    <div class= "small-container cart-page">
-        <div class="last-page-wrap">
-
-        <div class="container">
-             <div class= "navbar">
-                <div class= "logo"></div>
-            </div> 
-
-
-         </div> 
-         <!-- <h2 id="cart-page-title">Your Cart</h2> -->
-    
-        <div class= "small-container cart-page">
-    
-            <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th></th>
-                </tr>
-                <tr class="cart-items" id="cart-item-1">
-                    <td>
-                        <div class= "cart-info">
-                            <img/>
-                            <div>
-                                <p>
-                                  <a> Price: </a>
-                                </p>
-                                <br>
-                                <a href= "">Remove</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td><input type= "number" value= "1"></td>
-                    <td></td>
-                </tr>
-            </table>
-            <div class= "total-price">
-                <table>
-                    <tr>
-                        <td>Subtotal:</td>
-                        <td></td>
-    
-                    </tr>
-                    <tr>
-                        <td>Tax:</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Total:</td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
+      <!-- This is the content of the page -->
+      <div class="container">
+        <div class="cart-table-div">
+          <table>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+            </tr>
+            <tr class="cart-items" id="cart-item-1">
+              <td>
+                <div class="cart-info">
+                  <img
+                    id="cart-page-img"
+                    src="cup-lemon-juice-wooden-board.jpg"
+                  />
+                  <div id="item-info">
+                    <a> **Item Name</a><br />
+                    <a> Price: **$4.99</a>
+                  </div>
+                  <a href="">Remove</a>
+                </div>
+              </td>
+              <td><input type="number" value="1" /></td>
+            </tr>
+          </table>
         </div>
-    </div>
-    <nav>
-        
-        <div id="MenuItems">
-            <button type= "button">Finalize Order</button>
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>Subtotal:</td>
+              <td>**Subtotal price here</td>
+            </tr>
+            <tr>
+              <td>Tax:</td>
+              <td>**tax number here</td>
+            </tr>
+            <tr>
+              <td>Total:</td>
+              <td>**total price here</td>
+            </tr>
+          </table>
+          <div id="MenuItems">
+            <button type="button">Finalize Order</button>
             <script>
-                var pressedButton = document.getElementsByTagName("button")[0];
-                pressedButton.addEventListener("click", function (event) {
-                   alert("You have finalized your order!")
-                })
-             </script>
-             <button type="button">Clear Order</button>
-             <script>
-                 var pressedButton = document.getElementsByTagName("button")[1];
-                pressedButton.addEventListener("click", function (event) {
-                   alert("You have cleared your order :")
-                })
-             </script>      
-
+              var pressedButton = document.getElementsByTagName("button")[0];
+              pressedButton.addEventListener("click", function (event) {
+                alert("You have finalized your order!");
+              });
+            </script>
+            <button type="button">Clear Order</button>
+            <script>
+              var pressedButton = document.getElementsByTagName("button")[1];
+              pressedButton.addEventListener("click", function (event) {
+                alert("You have cleared your order :");
+              });
+            </script>
+          </div>
         </div>
-        
-    </nav>
-</div>
-
-        <div class="the-foot">
-
-            <p>&#169; 2021 Digital Crafts</p>
+      </div>
+      <div class="the-foot">
+        <p>&#169; 2021 Digital Crafts</p>
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="#" class="fa fa-instagram"></a>
-          
-        </div>
+      </div>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
-</body>
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./order.js"></script>
+    <script type="text/javascript" src="./drink.js"></script>
+    <script src="order.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
