@@ -47,6 +47,7 @@ async function displayAllDrinks() {
             $("#cocktailTile" + [i + 1] + "Label").html(
                 data1.drinks[desiredDrinks[i]].strDrink
             );
+            
         }
     } catch (error) {
         console.log(error);
@@ -75,7 +76,7 @@ function addToOrder() {
             console.log("starting a new order");
             removeDrink();
         } else if (localStorage.getItem("drinkAdded") && localStorage.getItem("orderInProgress")) {
-          let continueOrder = JSON.parse(localStorage.getItem("orderInProgress"));
+            let continueOrder = JSON.parse(localStorage.getItem("orderInProgress"));
             let drinkToBeAdded = JSON.parse(localStorage.getItem("drinkAdded"));
             continueOrder.drinksArr.push(drinkToBeAdded);
             let OrderToBeAdded_Serialized = JSON.stringify(continueOrder);
