@@ -65,20 +65,77 @@
                     <td><input type= "number" value= "1"></td>
                     <td></td>
                 </tr>
+            </tr>
+        </tr>
+        <tr>
+            <td>
+            <div class= "cart-info">
+                <img />
+                <div>
+                <p></p>
+                <small>Price: </small>
+                <br>
+                <a href= "">Remove</a>
+            </div>
+            </td>
+            <td><input type= "number" value= "1"></td>
+            <td></td>
+        </tr>
+    </tr>
+    <tr>
+        <td>
+        <div class= "cart-info">
+            <img />
+            <div>
+            <p></p>
+            <small>Price: </small>
+            <br>
+            <a href= "">Remove</a>
+        </div>
+        </td>
+        <td><input type= "number" value= "1"></td>
+        <td></td>
+    </tr>
+         
+</div>
+<!-- <nav>
+    
+    <ul id="MenuItems">
+        <button type="button" id="finalizeOrderButton">Finalize Order</button>
+        <script>
+            var pressedButton = document.getElementsByTagName("button")[0];
+            pressedButton.addEventListener("click", function (event) {
+               alert("You have finalized your order!")
+            })//what data to we want to display
+         </script>
+         <button type="button">Clear Order</button>
+         <script>
+             var pressedButton = document.getElementsByTagName("button")[1];
+            pressedButton.addEventListener("click", function (event) {
+               alert("You have cleared your order :")
+            })
+         </script>      
+
+    </ul>
+    
+</nav> -->
+</div>  
+       
+               
             </table>
             <div class= "total-price">
                 <table>
                     <tr>
-                        <td>Subtotal:</td>
+                        <td id="subtotal">Subtotal:</td>
                         <td></td>
     
                     </tr>
                     <tr>
-                        <td>Tax:</td>
+                        <td id="taxAmt">Tax: (10%)</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>Total:</td>
+                        <td id="totalAmt">Total:</td>
                         <td></td>
                     </tr>
                 </table>
@@ -99,6 +156,7 @@
              <script>
                  var pressedButton = document.getElementsByTagName("button")[1];
                 pressedButton.addEventListener("click", function (event) {
+                    //once order object is ready, go here 
                    alert("You have cleared your order :")
                 })
              </script>      
