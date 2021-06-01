@@ -3,7 +3,7 @@ function fillOrderItems(){
     if(localStorage.getItem(orderInProgress))
     {
         let cartItems_des = JSON.parse(localStorage.getItem("orderInProgress")) ;
-        for (let i = 0; cartItems_des.drinksArr.lenght; i++) {
+        for (let i = 0; cartItems_des.drinksArr.length; i++) {
            
 
     }
