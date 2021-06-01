@@ -7,26 +7,33 @@ class Drink{
         this.strIngredients = _strIngredients;
         this.price = _price;
     }
-
     getStrDrink() {
-        return this.strDrink;
+        return strDrink;
     }
 
     getStrDrinkThumb() {
         return strDrinkThumb;
     }
 
-    getWins() {
-        return this.wins;
-    }
-
     getIdDrink() {
         return idDrink;
     }
-    
+
+    getPrice() {
+        return price;
+    }
+
     getStrInstructions() {
         return idDrink;
     }
+    getStrIngredients(){
+        return strIngredients;
+    }
+
+    
+    
+    
+    
 }
 
 
