@@ -48,10 +48,10 @@ async function displayAllDrinks() {
                 data1.drinks[desiredDrinks[i]].strDrink
             );
            
-            if(localStorage.getItem("idOrderStorage")===null){
-                localStorage.setItem("idOrderStorage","1");
-            }
-            
+                       
+        }
+        if(localStorage.getItem("idOrderStorage")===null){
+            localStorage.setItem("idOrderStorage","1");
         }
     } catch (error) {
         console.log(error);
