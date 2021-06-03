@@ -1,5 +1,7 @@
+"use stict";
+
 function fillOrderItems() {
-  //   try {
+  // try {
   if (localStorage.getItem("orderInProgress")) {
     let cartItems_des = JSON.parse(localStorage.getItem("orderInProgress"));
     let counts = {};
@@ -26,7 +28,7 @@ function fillOrderItems() {
             </td>
             <td><input class="quant" type="number" value="${
               counts[condensedDrinksList[i]]
-            }" /></td>
+            }" min="1"/></td>
           </tr>`
       );
     }
@@ -36,4 +38,10 @@ function fillOrderItems() {
   //   }
 }
 
+function updateCartFunction() {
+  let quant1 = $(".quant").text();
+  console.log(quant1);
+}
+
 fillOrderItems();
+$(".update-cart").click(updateCartFunction);
