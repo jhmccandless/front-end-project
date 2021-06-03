@@ -87,10 +87,10 @@ function addToCart() {
     // $('#subtotal').html(subtotal);
     // $('#taxAmt').html(taxAmt);
     // $('#totalAmt').html(total);
-    drinkAdded.strDrinkThumb = data1.drinks[0].strDrinkThumb;
-    let drinkAdded_serialized = JSON.stringify(drinkAdded);
-    localStorage.setItem("drinkAdded", drinkAdded_serialized);
-    localStorage.removeItem("drinkName");
+    // drinkAdded.strDrinkThumb = data1.drinks[0].strDrinkThumb;
+    // let drinkAdded_serialized = JSON.stringify(drinkAdded);
+    // localStorage.setItem("drinkAdded", drinkAdded_serialized);
+    // localStorage.removeItem("drinkName");
   } catch (error) {
     console.log(error);
   }
