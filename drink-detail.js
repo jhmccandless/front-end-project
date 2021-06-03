@@ -38,15 +38,15 @@ async function displayDrinkDetail() {
         drinkPrice = 4.00;
         }
         if(drinkSelected === "Michelada"){
-        drinkPrice = 5.50;
+        drinkPrice = 5.00;
         }
         if(drinkSelected === "Mojito"){
         drinkPrice = 5.00;
         }
         if(drinkSelected === "Munich Mule"){
-        drinkPrice = 5.50;
+        drinkPrice = 5.00;
         }
-        $('#drinkPrice').html(drinkPrice);
+        $('#drinkPrice').html('$ '+drinkPrice+".00");
     
     } catch (error) {
         {
@@ -78,16 +78,6 @@ function addToCart() {
         let drinkAdded_serialized = JSON.stringify(drinkAdded);
         localStorage.setItem("drinkAdded", drinkAdded_serialized);
         localStorage.removeItem("drinkName");
-
-        //need waht's on the cart object to figure out how many drinks and what cost for total 
-        // var tax = 0.10;
-        // var subtotal = '';//get prices off order object
-        // var taxAmt = subtotal * tax;
-        // var total = taxAmt + subtotal;
-
-        // $('#subtotal').html(subtotal);
-        // $('#taxAmt').html(taxAmt);
-        // $('#totalAmt').html(total);
 
     }
     catch (error) {
