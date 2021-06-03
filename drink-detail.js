@@ -57,7 +57,7 @@ async function displayDrinkDetail() {
 function addToCart() {
   try {
     let drinkAdded = new Drink();
-    let selectedIngridients = [];
+    // let selectedIngridients = [];
     drinkAdded.idDrink = data1.drinks[0].idDrink;
     drinkAdded.strDrink = data1.drinks[0].strDrink;
     drinkAdded.strInstructions = data1.drinks[0].strInstructions;
@@ -69,15 +69,12 @@ function addToCart() {
       if (data1.drinks[0][currentIng]) {
         drinkAdded.strIngredients[i - 1] =
           data1.drinks[0][currentMeasure] + data1.drinks[0][currentIng];
-      } else {
-        break;
       }
     }
     drinkAdded.strDrinkThumb = data1.drinks[0].strDrinkThumb;
     let drinkAdded_serialized = JSON.stringify(drinkAdded);
     localStorage.setItem("drinkAdded", drinkAdded_serialized);
     localStorage.removeItem("drinkName");
-
     //need waht's on the cart object to figure out how many drinks and what cost for total
     // var tax = 0.10;
     // var subtotal = '';//get prices off order object
@@ -87,10 +84,6 @@ function addToCart() {
     // $('#subtotal').html(subtotal);
     // $('#taxAmt').html(taxAmt);
     // $('#totalAmt').html(total);
-    drinkAdded.strDrinkThumb = data1.drinks[0].strDrinkThumb;
-    let drinkAdded_serialized = JSON.stringify(drinkAdded);
-    localStorage.setItem("drinkAdded", drinkAdded_serialized);
-    localStorage.removeItem("drinkName");
   } catch (error) {
     console.log(error);
   }
