@@ -38,8 +38,13 @@ function fillOrderItems() {
 
 fillOrderItems();
 
-function removeItem(event){
-    remove_btn = event.target
-    remove_btn_grandparent = remove_btn.parentElement.parentElement
-    remove_btn_grandprent.remove()
+var removeItems = document.getElementsByClassName('cart-info')
+for(var i = 0; i < removeItems.length; i++) {
+    var button = removeItems[i]
+    button.addEventListener('click', function(event) {
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
+        updateCart();
+    })
 }
+
