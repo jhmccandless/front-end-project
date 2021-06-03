@@ -45,3 +45,13 @@ function updateCartFunction() {
 
 fillOrderItems();
 $(".update-cart").click(updateCartFunction);
+
+var removeItems = document.getElementsByClassName("cart-info");
+for (var i = 0; i < removeItems.length; i++) {
+  var button = removeItems[i];
+  button.addEventListener("click", function (event) {
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateCart();
+  });
+}
