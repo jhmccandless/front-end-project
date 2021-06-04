@@ -282,7 +282,6 @@ body {
 }
 
 .total-price {
-  /* border-top: 3px solid black; */
   width: 100%;
   height: max-content;
   max-width: 300px;
@@ -334,4 +333,14 @@ th:last-child {
 
 #cart-page-img {
   max-width: 150px;
+}
+
+.cart-table-div {
+  /* border-style: solid; */
+  display: flex;
+  flex-direction: column;
+}
+
+.update-cart {
+  width: 110px;
 }

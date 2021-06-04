@@ -27,32 +27,33 @@ async function displayDrinkDetail() {
       }
     }
 
-    var drinkPrice = 0;
-    if (drinkSelected === "Cosmopolitan") {
-      drinkPrice = 6.0;
-    }
-    if (drinkSelected === "Death in the Afternoon") {
-      drinkPrice = 4.0;
-    }
-    if (drinkSelected === "Gin and Soda") {
-      drinkPrice = 4.0;
-    }
-    if (drinkSelected === "Michelada") {
-      drinkPrice = 5.5;
-    }
-    if (drinkSelected === "Mojito") {
-      drinkPrice = 5.0;
-    }
-    if (drinkSelected === "Munich Mule") {
-      drinkPrice = 5.5;
-    }
-    $("#drinkPrice").html(drinkPrice);
-  } catch (error) {
-    {
-      console.log(error);
+        var drinkPrice = 0;
+        if(drinkSelected === "Cosmopolitan"){
+        drinkPrice = 6.00;
+        }
+        if(drinkSelected === "Death in the Afternoon"){
+        drinkPrice = 4.00;
+        }
+        if(drinkSelected === "Gin and Soda"){
+        drinkPrice = 4.00;
+        }
+        if(drinkSelected === "Michelada"){
+        drinkPrice = 5.00;
+        }
+        if(drinkSelected === "Mojito"){
+        drinkPrice = 5.00;
+        }
+        if(drinkSelected === "Munich Mule"){
+        drinkPrice = 5.00;
+        }
+        $('#drinkPrice').html('$'+drinkPrice+".00");
+    
+    } catch (error) {
+        {
+            console.log(error);
+        }
     }
   }
-}
 
 function addToCart() {
   try {
@@ -61,7 +62,9 @@ function addToCart() {
     drinkAdded.idDrink = data1.drinks[0].idDrink;
     drinkAdded.strDrink = data1.drinks[0].strDrink;
     drinkAdded.strInstructions = data1.drinks[0].strInstructions;
-    drinkAdded.price = document.getElementById("drinkPrice").innerHTML;
+    var priceWithDollarSign = document.getElementById("drinkPrice").innerHTML;
+    drinkAdded.price = priceWithDollarSign.substring(1);
+
 
     for (let i = 1; i < 15; i++) {
       let currentIng = `strIngredient${i}`;
@@ -75,15 +78,7 @@ function addToCart() {
     let drinkAdded_serialized = JSON.stringify(drinkAdded);
     localStorage.setItem("drinkAdded", drinkAdded_serialized);
     localStorage.removeItem("drinkName");
-    //need waht's on the cart object to figure out how many drinks and what cost for total
-    // var tax = 0.10;
-    // var subtotal = '';//get prices off order object
-    // var taxAmt = subtotal * tax;
-    // var total = taxAmt + subtotal;
 
-    // $('#subtotal').html(subtotal);
-    // $('#taxAmt').html(taxAmt);
-    // $('#totalAmt').html(total);
   } catch (error) {
     console.log(error);
   }

@@ -1,5 +1,7 @@
+"use strict";
+
 function fillOrderItems() {
-  //   try {
+  // try {
   if (localStorage.getItem("orderInProgress")) {
     let cartItems_des = JSON.parse(localStorage.getItem("orderInProgress"));
     let counts = {};
@@ -26,14 +28,55 @@ function fillOrderItems() {
             </td>
             <td><input class="quant" type="number" value="${
               counts[condensedDrinksList[i]]
-            }" /></td>
+            }" min="1"/></td>
           </tr>`
       );
     }
-  }
+ 
+
+    var tax = 0.10;
+    var subtotal = 0;
+    for(i=0; i<cartItems_des.drinksArr.length; i++){
+        subtotal += parseInt(cartItems_des.drinksArr[i].price); 
+    }
+    console.log(subtotal);
+    var taxAmt = subtotal * tax;
+    console.log(taxAmt);
+    var total = taxAmt + subtotal;
+    console.log(total);
+
+    $('#subtotal').html(subtotal);
+    $('#taxAmt').html(taxAmt);
+    $('#totalAmt').html(total);
+
+    cartItems_des.subTotal = subtotal;
+    cartItems_des.tax = taxAmt;
+    cartItems_des.total = total;
+
+    cartItems_des = JSON.stringify(cartItems_des);
+    localStorage.setItem("orderInProgress", cartItems_des);
+
+  
   //   } catch (error) {
   //     console.log(error);
   //   }
+ }
+}
+
+function updateCartFunction() {
+  let quant1 = $(".quant").text();
+  console.log(quant1);
 }
 
 fillOrderItems();
+$(".update-cart").click(updateCartFunction);
+
+var removeItems = document.getElementsByClassName("cart-info");
+for (var i = 0; i < removeItems.length; i++) {
+  var button = removeItems[i];
+  button.addEventListener("click", function (event) {
+    var buttonClicked = event.target;
+    buttonClicked.parentElement.parentElement.remove();
+    updateCart();
+  });
+}
