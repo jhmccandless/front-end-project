@@ -32,13 +32,12 @@ function fillOrderItems() {
           </tr>`
       );
     }
-  }
+ 
 
     var tax = 0.10;
     var subtotal = 0;
     for(i=0; i<cartItems_des.drinksArr.length; i++){
-        a = parseInt(cartItems_des.drinksArr[i].price); 
-        subtotal += a;
+        subtotal += parseInt(cartItems_des.drinksArr[i].price); 
     }
     console.log(subtotal);
     var taxAmt = subtotal * tax;
@@ -61,6 +60,7 @@ function fillOrderItems() {
   //   } catch (error) {
   //     console.log(error);
   //   }
+ }
 }
 
 function updateCartFunction() {
