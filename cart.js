@@ -1,4 +1,4 @@
-"use stict";
+"use strict";
 
 function fillOrderItems() {
   // try {
@@ -32,11 +32,33 @@ function fillOrderItems() {
           </tr>`
       );
     }
-    console.log(counts);
+
+    var tax = 0.1;
+    var subtotal = 0;
+    for (i = 0; i < cartItems_des.drinksArr.length; i++) {
+      subtotal += parseInt(cartItems_des.drinksArr[i].price);
+    }
+    console.log(subtotal);
+    var taxAmt = subtotal * tax;
+    console.log(taxAmt);
+    var total = taxAmt + subtotal;
+    console.log(total);
+
+    $("#subtotal").html(subtotal);
+    $("#taxAmt").html(taxAmt);
+    $("#totalAmt").html(total);
+
+    cartItems_des.subTotal = subtotal;
+    cartItems_des.tax = taxAmt;
+    cartItems_des.total = total;
+
+    cartItems_des = JSON.stringify(cartItems_des);
+    localStorage.setItem("orderInProgress", cartItems_des);
+
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
   }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
 }
 
 function updateCartFunction() {
