@@ -28,7 +28,7 @@ class Order {
     }
 
     getTotal() {
-        return idDrink;
+        return total;
     }
     
 }
