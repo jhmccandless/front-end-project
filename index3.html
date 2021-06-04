@@ -77,14 +77,47 @@
             <script>
               var pressedButton = document.getElementsByTagName("button")[0];
               pressedButton.addEventListener("click", function (event) {
-                alert("You have finalized your order!");
-              });
+                let finalizedOrders =[];
+                  let idOrder = 0;
+                  let orderToComplete = {};
+                if(localStorage.getItem("finalizedOrders")===null)
+                {
+                  orderToComplete = JSON.parse(localStorage.getItem("orderInProgress"));
+                  finalizedOrders.push(orderToComplete);
+                  finalizedOrders = JSON.stringify(finalizedOrders);
+                  localStorage.setItem("finalizedOrders",finalizedOrders);
+                  idOrder = localStorage.getItem("idOrderStorage");
+                  idOrder = parseInt(idOrder);
+                  idOrder = idOrder +1;
+                  localStorage.setItem("idOrderStorage",idOrder);
+                  localStorage.removeItem("orderInProgress");
+                  alert("You have finalized your order!");
+                  location.reload();
+                }
+                else{
+                  
+                  orderToComplete = JSON.parse(localStorage.getItem("orderInProgress"));
+                  finalizedOrders = JSON.parse(localStorage.getItem("finalizedOrders"));
+                  finalizedOrders.push(orderToComplete);
+                  finalizedOrders = JSON.stringify(finalizedOrders);
+                  localStorage.setItem("finalizedOrders",finalizedOrders);
+                  idOrder = localStorage.getItem("idOrderStorage");
+                  idOrder = parseInt(idOrder);
+                  idOrder = idOrder +1;
+                  localStorage.setItem("idOrderStorage",idOrder);
+                  localStorage.removeItem("orderInProgress");
+                  alert("You have finalized your order!");
+                  location.reload();
+                }
+            });
             </script>
             <button type="button">Clear Order</button>
             <script>
               var pressedButton = document.getElementsByTagName("button")[1];
               pressedButton.addEventListener("click", function (event) {
+                localStorage.removeItem("orderInProgress");
                 alert("You have cleared your order :");
+                location.reload();
               });
             </script>
           </div>
