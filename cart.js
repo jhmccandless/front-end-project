@@ -28,16 +28,15 @@ function fillOrderItems() {
             </td>
             <td><input class="quant" type="number" value="${
               counts[condensedDrinksList[i]]
-            }" min="1"/></td>
+            }" min="1" disable/></td>
           </tr>`
       );
     }
- 
 
-    var tax = 0.10;
+    var tax = 0.1;
     var subtotal = 0;
-    for(i=0; i<cartItems_des.drinksArr.length; i++){
-        subtotal += parseInt(cartItems_des.drinksArr[i].price); 
+    for (i = 0; i < cartItems_des.drinksArr.length; i++) {
+      subtotal += parseInt(cartItems_des.drinksArr[i].price);
     }
     console.log(subtotal);
     var taxAmt = subtotal * tax;
@@ -45,9 +44,9 @@ function fillOrderItems() {
     var total = taxAmt + subtotal;
     console.log(total);
 
-    $('#subtotal').html(subtotal);
-    $('#taxAmt').html(taxAmt);
-    $('#totalAmt').html(total);
+    $("#subtotal").html(subtotal);
+    $("#taxAmt").html(taxAmt);
+    $("#totalAmt").html(total);
 
     cartItems_des.subTotal = subtotal;
     cartItems_des.tax = taxAmt;
@@ -56,20 +55,18 @@ function fillOrderItems() {
     cartItems_des = JSON.stringify(cartItems_des);
     localStorage.setItem("orderInProgress", cartItems_des);
 
-  
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
- }
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+  }
 }
 
 function updateCartFunction() {
-  let quant1 = $(".quant").text();
-  console.log(quant1);
+  console.log(counts[condensedDrinksList]);
 }
 
 fillOrderItems();
-$(".update-cart").click(updateCartFunction);
+// $(".update-cart").click(updateCartFunction);
 
 var removeItems = document.getElementsByClassName("cart-info");
 for (var i = 0; i < removeItems.length; i++) {
@@ -80,3 +77,18 @@ for (var i = 0; i < removeItems.length; i++) {
     updateCart();
   });
 }
+
+// for ()
+//   if strdring = strinkg
+//     remove stringdrink
+
+// or a .map();
+// find index ();
+
+/*
+  *********** gotta grab the item!! **********
+  0: click remove, grap value i want to remove (console or alert)
+  1: loop through array
+  2: find the element we want
+  3: remove this one item
+*/
