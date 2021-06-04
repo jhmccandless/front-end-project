@@ -28,7 +28,7 @@ function fillOrderItems() {
             </td>
             <td><input class="quant" type="number" value="${
               counts[condensedDrinksList[i]]
-            }" min="1"/></td>
+            }" min="1" disable/></td>
           </tr>`
       );
     }

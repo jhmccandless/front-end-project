@@ -261,8 +261,12 @@ body {
 }
 
 #allCocktailTiles {
-  margin: 4%;
-  /* height: 100%; */
+  padding: 3%;
+}
+
+#first-page-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 /*----Cart page setup--------*/
@@ -343,4 +347,10 @@ th:last-child {
 
 .update-cart {
   width: 110px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
