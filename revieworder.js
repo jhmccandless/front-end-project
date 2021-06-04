@@ -14,6 +14,10 @@ function fillOrderItems() {
   if (localStorage.getItem("finalizedOrders")&&idOrder) {
     finalizedOrders = JSON.parse(localStorage.getItem("finalizedOrders"));  
     indexArray = finalizedOrders.findIndex(x =>x.idOrder===idOrder);
+    if (indexArray<0){
+        alert("Order not found!");
+    }
+    else{
     cartItems_des = finalizedOrders[indexArray];
     counts = {};
     cartItems_des.drinksArr.forEach(function (x) {
@@ -59,7 +63,7 @@ function fillOrderItems() {
     $('#subtotal').html(subtotal);
     $('#taxAmt').html(taxAmt);
     $('#totalAmt').html(total);
-
+}
     // cartItems_des.subTotal = subtotal;
     // cartItems_des.tax = taxAmt;
     // cartItems_des.total = total;
