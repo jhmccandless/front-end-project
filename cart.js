@@ -32,6 +32,7 @@ function fillOrderItems() {
           </tr>`
       );
     }
+    console.log(counts);
   }
   //   } catch (error) {
   //     console.log(error);
@@ -39,12 +40,11 @@ function fillOrderItems() {
 }
 
 function updateCartFunction() {
-  let quant1 = $(".quant").text();
-  console.log(quant1);
+  console.log(counts[condensedDrinksList]);
 }
 
 fillOrderItems();
-$(".update-cart").click(updateCartFunction);
+// $(".update-cart").click(updateCartFunction);
 
 var removeItems = document.getElementsByClassName("cart-info");
 for (var i = 0; i < removeItems.length; i++) {
@@ -55,3 +55,18 @@ for (var i = 0; i < removeItems.length; i++) {
     updateCart();
   });
 }
+
+// for ()
+//   if strdring = strinkg
+//     remove stringdrink
+
+// or a .map();
+// find index ();
+
+/*
+  *********** gotta grab the item!! **********
+  0: click remove, grap value i want to remove (console or alert)
+  1: loop through array
+  2: find the element we want
+  3: remove this one item
+*/
