@@ -336,7 +336,7 @@ th:last-child {
 }
 
 .cart-table-div {
-  border-style: solid;
+  /* border-style: solid; */
   display: flex;
   flex-direction: column;
 }
