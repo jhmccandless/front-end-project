@@ -43,6 +43,7 @@ body {
     rgb(183, 128, 255),
     rgb(174, 248, 104)
   );
+  background-attachment: fixed;
 }
 
 .wrapper {
