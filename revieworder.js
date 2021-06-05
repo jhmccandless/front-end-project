@@ -10,6 +10,7 @@ function fillOrderItems() {
       let finalizedOrders={};
       let condensedDrinksList={};
       idOrder= $('#osearch').val();
+
       
   if (localStorage.getItem("finalizedOrders")&&idOrder) {
     finalizedOrders = JSON.parse(localStorage.getItem("finalizedOrders"));  
@@ -51,7 +52,7 @@ function fillOrderItems() {
 
     var tax = 0.10;
     var subtotal = 0;
-    for(i=0; i<cartItems_des.drinksArr.length; i++){
+    for(let i=0; i<cartItems_des.drinksArr.length; i++){
         subtotal += parseInt(cartItems_des.drinksArr[i].price); 
     }
     console.log(subtotal);
@@ -63,22 +64,18 @@ function fillOrderItems() {
     $('#subtotal').html(subtotal);
     $('#taxAmt').html(taxAmt);
     $('#totalAmt').html(total);
+    $("#orderNumberbttn").prop("disabled",true);
 }
-    // cartItems_des.subTotal = subtotal;
-    // cartItems_des.tax = taxAmt;
-    // cartItems_des.total = total;
-
-    // cartItems_des = JSON.stringify(cartItems_des);
-    // localStorage.setItem("orderInProgress", cartItems_des);
-
-  
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
+    
  }
  else{
     alert("No orders to review!");
  }
+}
+
+function clearSearch(){
+    location.reload();
+    $("#orderNumberbttn").prop("disabled",false);
 }
 
 function updateCartFunction() {
