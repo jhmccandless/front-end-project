@@ -80,6 +80,7 @@
                 let finalizedOrders =[];
                   let idOrder = 0;
                   let orderToComplete = {};
+                if(localStorage.getItem("orderInProgress"))  {
                 if(localStorage.getItem("finalizedOrders")===null)
                 {
                   orderToComplete = JSON.parse(localStorage.getItem("orderInProgress"));
@@ -109,6 +110,10 @@
                   alert("You have finalized your order!");
                   location.reload();
                 }
+              }
+              else{
+                alert("Order is empty!")
+              }
             });
             </script>
             <button type="button">Clear Order</button>
