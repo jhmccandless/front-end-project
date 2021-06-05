@@ -44,9 +44,13 @@ function fillOrderItems() {
     var total = taxAmt + subtotal;
     console.log(total);
 
-    $("#subtotal").html(subtotal);
-    $("#taxAmt").html(taxAmt);
-    $("#totalAmt").html(total);
+    subtotal.toFixed(2);
+    taxAmt.toFixed(2);
+    total.toFixed(2);
+
+    $('#subtotal').html("$"+subtotal);
+    $('#taxAmt').html("$"+taxAmt);
+    $('#totalAmt').html("$"+total);
 
     cartItems_des.subTotal = subtotal;
     cartItems_des.tax = taxAmt;
@@ -92,3 +96,11 @@ for (var i = 0; i < removeItems.length; i++) {
   2: find the element we want
   3: remove this one item
 */
+
+function cartCount(){
+  let productNumbers = localStorage.getItem('cartNumbers');
+  productNumbers = parseInt(productNumbers);
+  if(productNumbers){
+    localStorage.setItem(cartNumber, productNumbers + 1);
+  }
+}
