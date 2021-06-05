@@ -96,3 +96,11 @@ for (var i = 0; i < removeItems.length; i++) {
   2: find the element we want
   3: remove this one item
 */
+
+function cartCount(){
+  let productNumbers = localStorage.getItem('cartNumbers');
+  productNumbers = parseInt(productNumbers);
+  if(productNumbers){
+    localStorage.setItem(cartNumber, productNumbers + 1);
+  }
+}
