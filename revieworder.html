@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review Order</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,11 +33,17 @@
         <div class="cart-table-div">
           <table class="cart-table">
             <tr>
-                <th><label>Order Id Search:</label></th>
-                <th>
-                <button id="orderNumberbttn" onclick="fillOrderItems()" type="button">Find Order Number</button>
-                <input type="text" id="osearch" name="osearch">
-                </th>
+              <th><label>Order Id Search:</label></th>
+              <th>
+                <button
+                  id="orderNumberbttn"
+                  onclick="fillOrderItems()"
+                  type="button"
+                >
+                  Find Order Number
+                </button>
+                <input type="text" id="osearch" name="osearch" />
+              </th>
             </tr>
             <tr>
               <th>Product</th>
@@ -78,9 +84,7 @@
               <td id="totalAmt">**total price here</td>
             </tr>
           </table>
-          <div id="MenuItems">
-           
-          </div>
+          <div id="MenuItems"></div>
         </div>
       </div>
       <div class="the-foot">
@@ -99,7 +103,6 @@
     <script type="text/javascript" src="./index.js"></script>
     <script type="text/javascript" src="./order.js"></script>
     <script type="text/javascript" src="./drink.js"></script>
-    <script type="text/javascript" src="./cart.js"></script>
     <script type="text/javascript" src="./revieworder.js"></script>
   </body>
 </html>
